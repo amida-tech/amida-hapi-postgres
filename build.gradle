@@ -1,0 +1,67 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.6.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.amida'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-actuator')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-jersey')
+    compile('org.springframework.boot:spring-boot-configuration-processor')
+
+    // https://mvnrepository.com/artifact/ca.uhn.hapi.fhir/hapi-fhir-spring-boot-starter
+    compile('ca.uhn.hapi.fhir:hapi-fhir-spring-boot-starter:3.3.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-jpaserver-base:3.3.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-jaxrsserver-base:3.3.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-structures-dstu2:3.3.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:3.3.0')
+
+
+    compile('org.hibernate:hibernate-core:5.2.17.Final')
+    compile('org.hibernate:hibernate-entitymanager:5.2.17.Final')
+    compile('org.hibernate:hibernate-ehcache:5.2.17.Final')
+    compile('org.hibernate:hibernate-validator:5.4.2.Final')
+
+    compile('org.hibernate:hibernate-search-engine:5.9.1.Final')
+    compile('org.hibernate:hibernate-search-orm:5.9.1.Final')
+    compile('org.apache.lucene:lucene-core:5.5.5')
+    compile('org.apache.lucene:lucene-analyzers-common:5.5.5')
+    compile('org.apache.lucene:lucene-analyzers-phonetic:5.5.5')
+    compile('org.apache.lucene:lucene-facet:5.5.5')
+    compile('org.apache.lucene:lucene-highlighter:5.5.5')
+    compile('org.apache.lucene:lucene-join:5.5.5')
+    compile('org.apache.lucene:lucene-memory:5.5.5')
+    compile('org.apache.lucene:lucene-misc:5.5.5')
+    compile('org.apache.lucene:lucene-queries:5.5.5')
+    compile('org.apache.lucene:lucene-queryparser:5.5.5')
+
+    compile('com.github.dnault:xml-patch:0.3.1'){
+        force = true
+    }
+
+    runtime('com.h2database:h2')
+    compileOnly('org.projectlombok:lombok')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
