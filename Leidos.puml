@@ -1,0 +1,39 @@
+@startuml
+Participant careC2
+Participant "FHIR Gateway"
+Participant "Subscription Service"
+Participant "Schedule Service"
+Participant "FHIR Service"
+Participant "Custom Connector"
+Participant EMR
+careC2 --> "FHIR Gateway": Subscription Request
+"FHIR Gateway" --> "Subscription Service": Subscription Request
+"Subscription Service" --> "Subscription Service": Activate Subscscription
+"Schedule Service" --> "Subscription Service": Request Active\n Subscriptions\n  (scheduled)
+activate "Subscription Service"
+"Subscription Service" --> "Schedule Service": Active Subscriptions
+deactivate  "Subscription Service"
+activate "Schedule Service"
+"Schedule Service" --> "Schedule Service": Check Sub Status
+"Schedule Service" --> "FHIR Service": Objects to Retrieve (Kafka)
+deactivate "Schedule Service"
+activate "FHIR Service"
+"FHIR Service" --> EMR: FHIR Search
+activate EMR
+"FHIR Service" <-- EMR: FHIR Search Response
+deactivate EMR
+"FHIR Service" --> "Custom Connector": FHIR Request (Kafka)
+activate "Custom Connector"
+"Custom Connector" --> "Custom Connector": Translate Request
+"Custom Connector" --> EMR: Native Request
+activate EMR
+"Custom Connector" <-- EMR: Native Response
+deactivate EMR
+"Custom Connector" --> "FHIR Service": FHIR Search Response
+deactivate "Custom Connector"
+note over "FHIR Gateway": If Kafka is used by Fhir service for response\nthe update may go directly to careC2\nmessage queue.
+"FHIR Service" --> "Schedule Service": Update Object Status\n(Optionally Kafka)
+"FHIR Service" --> "FHIR Gateway": FHIR Search Response\n(Optionally Kafka)
+deactivate "FHIR Service"
+"FHIR Gateway" --> careC2: FHIR Bundle (Kafka)
+@enduml

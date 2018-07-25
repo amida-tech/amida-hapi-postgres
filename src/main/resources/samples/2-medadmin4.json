@@ -1,0 +1,57 @@
+{
+    "status": "completed",
+    "medicationReference": {
+      "reference": "Medication/4"
+    },
+    "patient": {
+      "reference": "Patient/2"
+    },
+    "prescription": {
+      "reference": "MedicationOrder/4"
+    },
+    "effectiveTimePeriod": {
+      "start": "2018-02-23",
+      "end": "2018-03-04"
+    },
+    "resourceType": "MedicationAdministration",
+    "text": {
+      "status": "generated",
+      "div": "http://localhost:8080/fhir/medication-admin"
+    },
+    "practitioner": {
+      "text": "Dr. Bob",
+      "reference": "Practitioner/35"
+    },
+    "id": "MedicationAdministration/4",
+    "dosage": {
+      "route": {
+        "coding": [
+          {
+            "code": "1234",
+            "system": "http://snomed.info/sct",
+            "display": "Oxymorphone 3 mg/kg IV infusion over 30 minutes"
+          }
+        ]
+      },
+      "rateRatio": {
+        "denominator": {
+          "code": "258702006",
+          "unit": "minutes",
+          "value": 60,
+          "system": "http://snomed.info/sct"
+        },
+        "numerator": {
+          "code": "mg",
+          "unit": "mg",
+          "value": 80,
+          "system": "http://unitsofmeasure.org"
+        }
+      },
+      "quantity": {
+        "code": "mg",
+        "unit": "mg",
+        "value": 80,
+        "system": "http://unitsofmeasure.org"
+      }
+    }
+  }

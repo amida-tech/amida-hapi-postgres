@@ -1,0 +1,56 @@
+{
+    "status": "completed",
+    "medicationReference": {
+      "reference": "Medication/2"
+    },
+    "patient": {
+      "reference": "Patient/1"
+    },
+    "prescription": {
+      "reference": "MedicationOrder/2"
+    },
+    "effectiveTimePeriod": {
+      "start": "2018-01-31",
+      "end": "2018-02-20"
+    },
+    "resourceType": "MedicationAdministration",
+    "text": {
+      "status": "generated",
+      "div": "http://localhost:8080/fhir/medication-admin"
+    },
+    "practitioner": {
+      "reference": "Practitioner/23"
+    },
+    "id": "MedicationAdministration/2",
+    "dosage": {
+      "route": {
+        "coding": [
+          {
+            "code": "1236",
+            "system": "http://snomed.info/sct",
+            "display": "3.0 mg/kg IV infusion over 30 minutes"
+          }
+        ]
+      },
+      "rateRatio": {
+        "denominator": {
+          "code": "258702006",
+          "unit": "minutes",
+          "value": 60,
+          "system": "http://snomed.info/sct"
+        },
+        "numerator": {
+          "code": "mg",
+          "unit": "mg",
+          "value": 80,
+          "system": "http://unitsofmeasure.org"
+        }
+      },
+      "quantity": {
+        "code": "mg",
+        "unit": "mg",
+        "value": 80,
+        "system": "http://unitsofmeasure.org"
+      }
+    }
+  }

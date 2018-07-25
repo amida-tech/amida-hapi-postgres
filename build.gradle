@@ -32,11 +32,11 @@ dependencies {
     compile('org.springframework.boot:spring-boot-configuration-processor')
 
     // https://mvnrepository.com/artifact/ca.uhn.hapi.fhir/hapi-fhir-spring-boot-starter
-    compile('ca.uhn.hapi.fhir:hapi-fhir-spring-boot-starter:3.3.0')
-    compile('ca.uhn.hapi.fhir:hapi-fhir-jpaserver-base:3.3.0')
-    compile('ca.uhn.hapi.fhir:hapi-fhir-jaxrsserver-base:3.3.0')
-    compile('ca.uhn.hapi.fhir:hapi-fhir-structures-dstu2:3.3.0')
-    compile('ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:3.3.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-spring-boot-starter:3.4.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-jpaserver-base:3.4.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-jaxrsserver-base:3.4.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-structures-dstu2:3.4.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:3.4.0')
 
 
     compile('org.hibernate:hibernate-core:5.2.17.Final')

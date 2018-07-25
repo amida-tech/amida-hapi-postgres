@@ -1,0 +1,39 @@
+{
+    "status": "confirmed",
+    "patient": {
+      "reference": "1685497"
+    },
+    "criticality": "CRITL",
+    "text": {
+      "status": "generated",
+      "div": "localhost:8080/allergy/1685497"
+    },
+    "recordedDate": "2018-06-21",
+    "id": "AllergyIntolerance/1",
+    "category": "food",
+    "reaction": [
+      {
+        "manifestation": [
+          {
+            "coding": [
+              {
+                "code": "39579001",
+                "system": "http://snomed.info/sct",
+                "display": "Anaphylaxis"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "substance": {
+      "coding": [
+        {
+          "code": "QE1QX6B99R",
+          "system": "UNII",
+          "display": "peanut"
+        }
+      ]
+    },
+    "resourceType": "AllergyIntolerance"
+  }

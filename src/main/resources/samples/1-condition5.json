@@ -1,0 +1,35 @@
+{
+    "category": {
+      "coding": [
+        {
+          "code": "allergy",
+          "system": "http://hl7.org/fhir/condition-category",
+          "display": "<type 'str'>"
+        }
+      ]
+    },
+    "code": {
+      "text": "122"
+    },
+    "patient": {
+      "reference": "Patient/3"
+    },
+    "severity": {
+      "coding": [
+        {
+          "code": "1",
+          "system": "http://snomed.info/sct",
+          "display": "severe"
+        }
+      ]
+    },
+    "onsetDateTime": "2018-06-21",
+    "resourceType": "Condition",
+    "text": {
+      "status": "generated",
+      "div": "localhost:8080/condition/3"
+    },
+    "verificationStatus": "confirmed",
+    "id": "Condition/5",
+    "clinicalStatus": "allergy"
+  }

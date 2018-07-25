@@ -1,0 +1,29 @@
+{
+    "product": {
+      "form": {
+        "coding": [
+          {
+            "code": "1189780",
+            "system": "http://snomed.info/sct",
+            "display": "1 tab qd"
+          }
+        ]
+      }
+    },
+    "code": {
+      "coding": [
+        {
+          "code": "1189780",
+          "system": "http://hc-sc.gc.ca",
+          "display": "Aspirin 81 MG [Ecotrin]"
+        }
+      ]
+    },
+    "resourceType": "Medication",
+    "text": {
+      "status": "generated",
+      "div": "http://localhost:8080/meds/358"
+    },
+    "isBrand": true,
+    "id": "Medication/2"
+  }

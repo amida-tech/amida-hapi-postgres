@@ -1,0 +1,39 @@
+{
+    "status": "confirmed",
+    "patient": {
+      "reference": "613876"
+    },
+    "criticality": "CRITL",
+    "text": {
+      "status": "generated",
+      "div": "localhost:8080/allergy/613876"
+    },
+    "recordedDate": "2018-06-21",
+    "id": "AllergyIntolerance/2",
+    "category": "medication",
+    "reaction": [
+      {
+        "manifestation": [
+          {
+            "coding": [
+              {
+                "code": "0",
+                "system": "http://snomed.info/sct",
+                "display": "none"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "substance": {
+      "coding": [
+        {
+          "code": "160244002",
+          "system": "SNOMED",
+          "display": "No known allergies"
+        }
+      ]
+    },
+    "resourceType": "AllergyIntolerance"
+  }

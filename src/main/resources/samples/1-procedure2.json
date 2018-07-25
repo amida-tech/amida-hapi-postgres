@@ -1,0 +1,41 @@
+{
+    "status": "completed",
+    "followUp": [
+      {
+        "text": "in hospital for 3 days "
+      }
+    ],
+    "performedDateTime": "2002-02-11",
+    "code": {
+      "text": "Spine surgery",
+      "coding": [
+        {
+          "code": "426945003",
+          "system": "http://snomed.info/sct",
+          "display": "Spine surgery"
+        }
+      ]
+    },
+    "resourceType": "Procedure",
+    "text": {
+      "status": "generated",
+      "div": "http://localhost:8080/fhir/procedure"
+    },
+    "notes": [
+      {
+        "text": "Successful,"
+      }
+    ],
+    "performer": [
+      {
+        "actor": {
+          "display": "Dr. Love",
+          "reference": "Practitioner/21"
+        }
+      }
+    ],
+    "id": "Procedure/2",
+    "subject": {
+      "reference": "Patient/2"
+    }
+  }

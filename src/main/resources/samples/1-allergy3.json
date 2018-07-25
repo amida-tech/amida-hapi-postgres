@@ -1,0 +1,42 @@
+{
+    "status": "confirmed",
+    "patient": {
+      "reference": "621799"
+    },
+    "criticality": "CRITU",
+    "text": {
+      "status": "generated",
+      "div": "localhost:8080/allergy/621799"
+    },
+    "recordedDate": "2018-06-21",
+    "id": "AllergyIntolerance/3",
+    "category": "medication",
+    "reaction": [
+      {
+        "manifestation": [
+          {
+            "coding": [
+              {
+                "code": "271807003",
+                "system": "http://snomed.info/sct",
+                "display": "skin rash"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "substance": {
+      "coding": [
+        {
+          "code": "N0000175503",
+          "system": "NDFRT",
+          "display": "sulfonamide antibacterial"
+        }
+      ]
+    },
+    "resourceType": "AllergyIntolerance",
+    "recorder": {
+      "reference": "Practitioner/13"
+    }
+  }

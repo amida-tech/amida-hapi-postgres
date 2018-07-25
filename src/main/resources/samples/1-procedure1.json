@@ -1,0 +1,41 @@
+{
+    "status": "completed",
+    "followUp": [
+      {
+        "text": "tomorrow, 24th"
+      }
+    ],
+    "performedDateTime": "2002-05-23",
+    "code": {
+      "text": "Breast mastectomy",
+      "coding": [
+        {
+          "code": "35637008",
+          "system": "http://snomed.info/sct",
+          "display": "Breast mastectomy"
+        }
+      ]
+    },
+    "resourceType": "Procedure",
+    "text": {
+      "status": "generated",
+      "div": "http://localhost:8080/fhir/procedure"
+    },
+    "notes": [
+      {
+        "text": "Successful, will need chemo"
+      }
+    ],
+    "performer": [
+      {
+        "actor": {
+          "display": "Dr. Killer",
+          "reference": "Practitioner/12"
+        }
+      }
+    ],
+    "id": "Procedure/1",
+    "subject": {
+      "reference": "Patient/1"
+    }
+}

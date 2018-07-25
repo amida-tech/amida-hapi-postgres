@@ -1,0 +1,35 @@
+{
+    "category": {
+      "coding": [
+        {
+          "code": "cancer",
+          "system": "http://hl7.org/fhir/condition-category",
+          "display": "<type 'str'>"
+        }
+      ]
+    },
+    "code": {
+      "text": "112"
+    },
+    "patient": {
+      "reference": "Patient/1"
+    },
+    "severity": {
+      "coding": [
+        {
+          "code": "0",
+          "system": "http://snomed.info/sct",
+          "display": "severe"
+        }
+      ]
+    },
+    "onsetDateTime": "2018-06-21",
+    "resourceType": "Condition",
+    "text": {
+      "status": "generated",
+      "div": "localhost:8080/condition/1"
+    },
+    "verificationStatus": "confirmed",
+    "id": "Condition/2",
+    "clinicalStatus": "breast cancer"
+  }
