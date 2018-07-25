@@ -1,7 +1,7 @@
 {
     "status": "confirmed",
     "patient": {
-      "reference": "621799"
+      "reference": "Patient/2"
     },
     "criticality": "CRITU",
     "text": {
