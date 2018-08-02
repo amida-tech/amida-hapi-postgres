@@ -63,17 +63,14 @@ public class HapiApplication {
 
                             if (validation.isSuccessful()){
                                 String origId = resource.getIdElement().toString();
-                                System.out.println(">>"+origId);
                                 MethodOutcome outcome = client.create()
                                         .resource(resource)
                                         .execute();
                                 System.out.println(outcome.getCreated());
                                 String id = outcome.getId().toUnqualifiedVersionless().toString();
                                 if (!id.equalsIgnoreCase(origId)){
-                                    System.out.println("adding: "+origId+" "+id);
                                     idMap.put(origId, id);
                                 }
-                                System.out.println(id);
 
                             }else{
                                 System.out.println(validation.getMessages());
