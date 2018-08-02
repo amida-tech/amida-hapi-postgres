@@ -6,9 +6,6 @@
     "patient": {
       "reference": "Patient/1"
     },
-    "prescription": {
-      "reference": "MedicationOrder/1"
-    },
     "effectiveTimePeriod": {
       "start": "2017-12-01",
       "end": "2018-01-30"

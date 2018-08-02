@@ -37,6 +37,6 @@
     },
     "resourceType": "AllergyIntolerance",
     "recorder": {
-      "reference": "Practitioner/13"
+      "reference": "Practitioner/4"
     }
   }

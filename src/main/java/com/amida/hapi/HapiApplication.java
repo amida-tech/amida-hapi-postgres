@@ -6,6 +6,8 @@ import ca.uhn.fhir.rest.api.MethodOutcome;
 import ca.uhn.fhir.rest.client.api.IGenericClient;
 import ca.uhn.fhir.validation.FhirValidator;
 import ca.uhn.fhir.validation.ValidationResult;
+import org.apache.catalina.webresources.FileResource;
+import org.apache.commons.io.FileUtils;
 import org.apache.lucene.document.Field;
 import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.springframework.boot.CommandLineRunner;
@@ -17,6 +19,8 @@ import org.springframework.context.annotation.Bean;
 
 import java.io.File;
 import java.io.FileReader;
+import java.util.Arrays;
+import java.util.HashMap;
 
 @SpringBootApplication
 public class HapiApplication {
@@ -24,7 +28,7 @@ public class HapiApplication {
     private FhirContext dstu2 = FhirContext.forDstu2();
     private IParser jsonParser = dstu2.newJsonParser();
     private FhirValidator validator = dstu2.newValidator();
-    private String serverBase = "http://localhost:8087/fhir";
+    private String serverBase = "http://localhost:8080/fhir";
     private IGenericClient client = dstu2.newRestfulGenericClient(serverBase);
 
     public static void main(String[] args) {
@@ -35,38 +39,52 @@ public class HapiApplication {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
-
-            File dir = new File(ctx.getClassLoader().getResource("samples").getFile());
+//            FileResource fs =
+            File dir = new File("/var/hapi/init");
+            if (!dir.exists())
+                dir = new File(ctx.getClassLoader().getResource("samples").getFile());
 
             if (dir.isDirectory()){
                 File[] files = dir.listFiles();
-
+                Arrays.sort(files);
+                HashMap<String, String> idMap = new HashMap<String, String>();
                 for(File f: files){
                     if (f.getName().endsWith(".json")){
-                        if (f.getName().startsWith("0")){
+
+                        System.out.println(f.getName());
+                        try{
+//                            FileReader reader = new FileReader(f);
+                            String fileBody = FileUtils.readFileToString(f);
+                            for (String tempId: idMap.keySet()){
+                                fileBody = fileBody.replaceAll("\""+tempId+"\"", "\""+idMap.get(tempId)+"\"");
+                            }
+                            IBaseResource resource = jsonParser.parseResource(fileBody);
+                            ValidationResult validation = validator.validateWithResult(resource);
+
+                            if (validation.isSuccessful()){
+                                String origId = resource.getIdElement().toString();
+                                System.out.println(">>"+origId);
+                                MethodOutcome outcome = client.create()
+                                        .resource(resource)
+                                        .execute();
+                                System.out.println(outcome.getCreated());
+                                String id = outcome.getId().toUnqualifiedVersionless().toString();
+                                if (!id.equalsIgnoreCase(origId)){
+                                    System.out.println("adding: "+origId+" "+id);
+                                    idMap.put(origId, id);
+                                }
+                                System.out.println(id);
+
+                            }else{
+                                System.out.println(validation.getMessages());
+                            }
+                        }catch (Exception e){
 
                             System.out.println(f.getName());
-                            try{
-                                FileReader reader = new FileReader(f);
-                                IBaseResource resource = jsonParser.parseResource(reader);
-                                ValidationResult validation = validator.validateWithResult(resource);
-
-                                if (validation.isSuccessful()){
-                                    MethodOutcome outcome = client.create()
-                                            .resource(resource)
-                                            .execute();
-                                    System.out.println(outcome.getCreated());
-                                    String id = outcome.getId().getIdPart();
-                                    System.out.println(id);
-
-                                }
-                            }catch (Exception e){
-
-                                System.out.println(f.getName());
-                                e.printStackTrace();
-                            }
-
+                            e.printStackTrace();
                         }
+
+
                     }
                 }
             }
