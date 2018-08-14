@@ -1,0 +1,6 @@
+{
+    "resourceType": "Subscription",
+    "criteria": "Medication?_id=13",
+    "reason": "Medication of id 13",
+    "status": "requested"
+}
