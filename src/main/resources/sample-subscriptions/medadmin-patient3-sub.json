@@ -14,10 +14,8 @@
     "reason": "New Patients Medication Administration",
     "status": "requested",
     "channel": {
-      "type": "rest-hook",
-      "endpoint": "https://localhost:8087/fhir/MedicationAdministration?patient=3",
-      "payload": "application/json",
-      "header": "Authorization: Bearer secret-token-abc-123"
+      "type": "message",
+      "payload": "application/json"
     },
     "end": "2021-01-01T00:00:00Z",
     "tag": [
@@ -25,5 +23,5 @@
         "system": "http://example.org/fhir/cs/internal",
         "code": "bili-done"
       }
-    ] 
+    ]
 }
