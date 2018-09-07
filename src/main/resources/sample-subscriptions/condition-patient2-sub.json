@@ -1,0 +1,27 @@
+{
+    "resourceType": "Subscription",
+    "text": {
+      "status": "generated",
+      "div": "<div>[Put rendering here]</div>"
+    },
+    "criteria": "Condition?patient=2",
+    "contact": [
+      {
+        "system": "phone",
+        "value": "ext 4123"
+      }
+    ],
+    "reason": "Condition of Patient 2",
+    "status": "requested",
+    "channel": {
+      "type": "message",
+      "payload": "application/json"
+    },
+    "end": "2021-01-01T00:00:00Z",
+    "tag": [
+      {
+        "system": "http://example.org/fhir/cs/internal",
+        "code": "bili-done"
+      }
+    ]
+}

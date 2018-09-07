@@ -1,0 +1,27 @@
+{
+    "resourceType": "Subscription",
+    "text": {
+      "status": "generated",
+      "div": "<div>[Put rendering here]</div>"
+    },
+    "criteria": "Practitioner?_id=4",
+    "contact": [
+      {
+        "system": "phone",
+        "value": "ext 4123"
+      }
+    ],
+    "reason": "Practitioner with the id 4",
+    "status": "requested",
+    "channel": {
+      "type": "message",
+      "payload": "application/json"
+    },
+    "end": "2021-01-01T00:00:00Z",
+    "tag": [
+      {
+        "system": "http://example.org/fhir/cs/internal",
+        "code": "bili-done"
+      }
+    ]
+}
