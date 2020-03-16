@@ -38,8 +38,8 @@ dependencies {
     compile('ca.uhn.hapi.fhir:hapi-fhir-spring-boot-starter:3.4.0')
     compile('ca.uhn.hapi.fhir:hapi-fhir-jpaserver-base:3.4.0')
     compile('ca.uhn.hapi.fhir:hapi-fhir-jaxrsserver-base:3.4.0')
-    compile('ca.uhn.hapi.fhir:hapi-fhir-structures-dstu2:3.4.0')
-    compile('ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:3.4.0')
+    // compile('ca.uhn.hapi.fhir:hapi-fhir-structures-dstu2:3.4.0')
+    // compile('ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:3.4.0')
     compile('ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:3.4.0')
     compile('ca.uhn.hapi.fhir:hapi-fhir-structures-r4:3.4.0')
 

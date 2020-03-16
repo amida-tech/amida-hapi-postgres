@@ -1,0 +1,4 @@
+### conformance
+http://localhost:8080/fhir/metadata?_format=json
+###
+http://localhost:8080/fhir/Patient/1
