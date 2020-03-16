@@ -31,12 +31,17 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-jersey')
     compile('org.springframework.boot:spring-boot-configuration-processor')
 
+    // to support R4 final we need to upgrade to 3.7.0 or above 
+    // 3.8.0 is the last release in the 3 series 4.1.0 is current release
+    // https://hapifhir.io/hapi-fhir/docs/introduction/versions.html
     // https://mvnrepository.com/artifact/ca.uhn.hapi.fhir/hapi-fhir-spring-boot-starter
     compile('ca.uhn.hapi.fhir:hapi-fhir-spring-boot-starter:3.4.0')
     compile('ca.uhn.hapi.fhir:hapi-fhir-jpaserver-base:3.4.0')
     compile('ca.uhn.hapi.fhir:hapi-fhir-jaxrsserver-base:3.4.0')
     compile('ca.uhn.hapi.fhir:hapi-fhir-structures-dstu2:3.4.0')
     compile('ca.uhn.hapi.fhir:hapi-fhir-validation-resources-dstu3:3.4.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:3.4.0')
+    compile('ca.uhn.hapi.fhir:hapi-fhir-structures-r4:3.4.0')
 
 
     compile('org.hibernate:hibernate-core:5.2.17.Final')
