@@ -25,11 +25,11 @@ import java.util.HashMap;
 @SpringBootApplication
 public class HapiApplication {
 
-    private FhirContext dstu2 = FhirContext.forDstu2();
-    private IParser jsonParser = dstu2.newJsonParser();
-    private FhirValidator validator = dstu2.newValidator();
+    private FhirContext r4 = FhirContext.forR4();
+    private IParser jsonParser = r4.newJsonParser();
+    private FhirValidator validator = r4.newValidator();
     private String serverBase = "http://localhost:8080/fhir";
-    private IGenericClient client = dstu2.newRestfulGenericClient(serverBase);
+    private IGenericClient client = r4.newRestfulGenericClient(serverBase);
 
     public static void main(String[] args) {
 
