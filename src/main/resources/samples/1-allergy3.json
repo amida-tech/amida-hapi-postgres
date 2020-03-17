@@ -1,7 +1,15 @@
 {
-    "status": "confirmed",
     "patient": {
       "reference": "Patient/2"
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
     },
     "criticality": "unable-to-assess",
     "text": {
@@ -23,18 +31,18 @@
               }
             ]
           }
-        ]
+        ],
+        "substance": {
+          "coding": [
+            {
+              "code": "N0000175503",
+              "system": "NDFRT",
+              "display": "sulfonamide antibacterial"
+            }
+          ]
+        }
       }
     ],
-    "substance": {
-      "coding": [
-        {
-          "code": "N0000175503",
-          "system": "NDFRT",
-          "display": "sulfonamide antibacterial"
-        }
-      ]
-    },
     "resourceType": "AllergyIntolerance",
     "recorder": {
       "reference": "Practitioner/4"

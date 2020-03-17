@@ -1,18 +1,21 @@
 {
-    "category": {
-      "coding": [
-        {
-          "code": "allergy",
-          "system": "http://hl7.org/fhir/condition-category",
-          "display": "<type 'str'>"
-        }
-      ]
-    },
+    "category": [
+      {
+        "coding": [
+          {
+            "code": "allergy",
+            "system": "http://hl7.org/fhir/condition-category",
+            "display": "<type 'str'>"
+          }
+        ]
+      }
+    ],
     "code": {
       "text": "122"
     },
-    "patient": {
-      "reference": "Patient/3"
+    "subject": {
+      "reference": "Patient/3",
+      "display": "John"
     },
     "severity": {
       "coding": [
@@ -29,7 +32,22 @@
       "status": "generated",
       "div": "localhost:8080/condition/3"
     },
-    "verificationStatus": "confirmed",
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
     "id": "Condition/5",
-    "clinicalStatus": "allergy"
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        }
+      ]
+    }
   }
