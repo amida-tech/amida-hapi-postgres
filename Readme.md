@@ -19,7 +19,7 @@ By default the image will list on 8080  with a root path of /fhir
 
 you should then be able to go to 
 
-http://localhost:8087/fhir/metadata?_format=json 
+http://localhost:8080/fhir/metadata?_format=json 
 
 to pull down the metadata statement.  
 
