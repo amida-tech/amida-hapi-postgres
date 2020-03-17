@@ -3,7 +3,7 @@
     "patient": {
       "reference": "Patient/2"
     },
-    "criticality": "CRITU",
+    "criticality": "unable-to-assess",
     "text": {
       "status": "generated",
       "div": "localhost:8080/allergy/621799"

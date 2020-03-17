@@ -3,7 +3,7 @@
     "patient": {
       "reference": "Patient/2"
     },
-    "criticality": "CRITL",
+    "criticality": "low",
     "text": {
       "status": "generated",
       "div": "localhost:8080/allergy/613876"
