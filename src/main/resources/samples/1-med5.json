@@ -1,29 +1,26 @@
 {
-    "product": {
-      "form": {
-        "coding": [
-          {
-            "code": "316133",
-            "system": "http://snomed.info/sct",
-            "display": "1 daily"
-          }
-        ]
+  "form": {
+    "coding": [
+      {
+        "code": "316133",
+        "system": "http://snomed.info/sct",
+        "display": "1 daily"
       }
-    },
-    "code": {
-      "coding": [
-        {
-          "code": "316133",
-          "system": "http://hc-sc.gc.ca",
-          "display": "Leflunomide 10 MILLIGRAM In 1 TABLET ORAL TABLET, FILM COATED"
-        }
-      ]
-    },
-    "resourceType": "Medication",
-    "text": {
-      "status": "generated",
-      "div": "http://localhost:8080/meds/12"
-    },
-    "isBrand": true,
-    "id": "Medication/5"
-  }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "316133",
+        "system": "http://hc-sc.gc.ca",
+        "display": "Leflunomide 10 MILLIGRAM In 1 TABLET ORAL TABLET, FILM COATED"
+      }
+    ]
+  },
+  "resourceType": "Medication",
+  "text": {
+    "status": "generated",
+    "div": "http://localhost:8080/meds/12"
+  },
+  "id": "Medication/5"
+}

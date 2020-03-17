@@ -3,10 +3,11 @@
     "medicationReference": {
       "reference": "Medication/2"
     },
-    "patient": {
-      "reference": "Patient/1"
+    "subject": {
+      "reference": "Patient/1",
+      "display": "Kevin"
     },
-    "effectiveTimePeriod": {
+    "effectivePeriod": {
       "start": "2018-01-31",
       "end": "2018-02-20"
     },
@@ -15,9 +16,13 @@
       "status": "generated",
       "div": "http://localhost:8080/fhir/medication-admin"
     },
-    "practitioner": {
-      "reference": "Practitioner/1"
-    },
+    "performer": [
+      {
+        "actor": {
+          "reference": "Practitioner/1"
+        }
+      }
+    ],
     "id": "MedicationAdministration/2",
     "dosage": {
       "route": {
@@ -43,7 +48,7 @@
           "system": "http://unitsofmeasure.org"
         }
       },
-      "quantity": {
+      "rateQuantity": {
         "code": "mg",
         "unit": "mg",
         "value": 80,

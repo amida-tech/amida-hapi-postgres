@@ -21,9 +21,9 @@
       "status": "generated",
       "div": "http://localhost:8080/fhir/procedure"
     },
-    "notes": [
+    "note": [
       {
-        "text": "Successful,"
+        "text": "Successful."
       }
     ],
     "performer": [

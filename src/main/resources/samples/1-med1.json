@@ -1,29 +1,36 @@
 {
-    "product": {
-      "form": {
-        "coding": [
-          {
-            "code": "1167622",
-            "system": "http://snomed.info/sct",
-            "display": "1 injection if needed for allergic reaction"
-          }
-        ]
+  "form": {
+    "coding": [
+      {
+        "code": "1167622",
+        "system": "http://snomed.info/sct",
+        "display": "1 injection if needed for allergic reaction"
       }
-    },
-    "code": {
-      "coding": [
-        {
-          "code": "1167622",
-          "system": "http://hc-sc.gc.ca",
-          "display": "EpiPen"
-        }
-      ]
-    },
-    "resourceType": "Medication",
-    "text": {
-      "status": "generated",
-      "div": "http://localhost:8080/meds/277"
-    },
-    "isBrand": true,
-    "id": "Medication/1"
-  }
+    ]
+  },
+  "manufacturer": {
+    "reference": "#org6"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "1167622",
+        "system": "http://hc-sc.gc.ca",
+        "display": "EpiPen"
+      }
+    ]
+  },
+  "resourceType": "Medication",
+  "text": {
+    "status": "generated",
+    "div": "http://localhost:8080/meds/277"
+  },
+  "id": "Medication/1",
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "org6",
+      "name": "Meridian Medical Technologies"
+    }
+  ]
+}

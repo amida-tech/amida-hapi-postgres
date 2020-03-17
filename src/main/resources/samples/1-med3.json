@@ -1,29 +1,26 @@
 {
-    "product": {
-      "form": {
-        "coding": [
-          {
-            "code": "404630",
-            "system": "http://snomed.info/sct",
-            "display": "4 gtt in ear bid x7 day"
-          }
-        ]
+  "form": {
+    "coding": [
+      {
+        "code": "404630",
+        "system": "http://snomed.info/sct",
+        "display": "4 gtt in ear bid x7 day"
       }
-    },
-    "code": {
-      "coding": [
-        {
-          "code": "404630",
-          "system": "http://hc-sc.gc.ca",
-          "display": "Ciprofloxacin 3 MG/ML / Dexamethasone 1 MG/ML Otic Suspension [Ciprodex]"
-        }
-      ]
-    },
-    "resourceType": "Medication",
-    "text": {
-      "status": "generated",
-      "div": "http://localhost:8080/meds/135"
-    },
-    "isBrand": true,
-    "id": "Medication/3"
-  }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "404630",
+        "system": "http://hc-sc.gc.ca",
+        "display": "Ciprofloxacin 3 MG/ML / Dexamethasone 1 MG/ML Otic Suspension [Ciprodex]"
+      }
+    ]
+  },
+  "resourceType": "Medication",
+  "text": {
+    "status": "generated",
+    "div": "http://localhost:8080/meds/135"
+  },
+  "id": "Medication/3"
+}
