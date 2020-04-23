@@ -1,0 +1,11 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:12.2-alpine
+    environment:
+      POSTGRES_PASSWORD: notReallyASecret
+      POSTGRES_DB: hapi_fhir
+  hapi:
+    image: amida-hapi:postgres
+    ports:
+    - 8080:8080
