@@ -2,3 +2,7 @@
 http://localhost:8080/fhir/metadata?_format=json
 ###
 http://localhost:8080/fhir/Patient/1
+###
+http://localhost:8080/fhir/Patient
+###
+http://localhost:8080/fhir/Medication
