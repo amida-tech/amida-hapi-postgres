@@ -1,0 +1,14 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:12.2-alpine
+    environment:
+      POSTGRES_PASSWORD: notReallyASecret
+      POSTGRES_DB: hapi_fhir
+  vscode:
+    build:
+        context: .
+        dockerfile: Dockerfile.dev
+    volumes:
+      - .:/workspace:cached
+    command: bin/sh -c "while sleep 1000; do :; done"
