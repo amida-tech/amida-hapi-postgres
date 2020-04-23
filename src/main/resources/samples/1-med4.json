@@ -1,29 +1,26 @@
 {
-    "product": {
-      "form": {
-        "coding": [
-          {
-            "code": "403917",
-            "system": "http://snomed.info/sct",
-            "display": "1 daily"
-          }
-        ]
+  "form": {
+    "coding": [
+      {
+        "code": "403917",
+        "system": "http://snomed.info/sct",
+        "display": "1 daily"
       }
-    },
-    "code": {
-      "coding": [
-        {
-          "code": "403917",
-          "system": "http://hc-sc.gc.ca",
-          "display": "24 HR Bupropion 150 MG Extended Release Tablet"
-        }
-      ]
-    },
-    "resourceType": "Medication",
-    "text": {
-      "status": "generated",
-      "div": "http://localhost:8080/meds/11"
-    },
-    "isBrand": true,
-    "id": "Medication/4"
-  }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "403917",
+        "system": "http://hc-sc.gc.ca",
+        "display": "24 HR Bupropion 150 MG Extended Release Tablet"
+      }
+    ]
+  },
+  "resourceType": "Medication",
+  "text": {
+    "status": "generated",
+    "div": "http://localhost:8080/meds/11"
+  },
+  "id": "Medication/4"
+}

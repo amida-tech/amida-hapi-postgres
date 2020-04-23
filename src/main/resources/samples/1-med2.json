@@ -1,29 +1,62 @@
 {
-    "product": {
-      "form": {
+  "form": {
+    "coding": [
+      {
+        "code": "1189780",
+        "system": "http://snomed.info/sct",
+        "display": "1 tab qd"
+      }
+    ]
+  },
+  
+  "manufacturer": {
+    "reference": "#org3"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "1189780",
+        "system": "http://hc-sc.gc.ca",
+        "display": "Aspirin 81 MG [Ecotrin]"
+      }
+    ]
+  },
+  "resourceType": "Medication",
+  "text": {
+    "status": "generated",
+    "div": "http://localhost:8080/meds/358"
+  },
+  "id": "Medication/2",
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "org3",
+      "name": "Prestige Consumer Healthcare Inc."
+    }
+  ],
+  "ingredient": [
+    {
+      "itemCodeableConcept": {
         "coding": [
           {
-            "code": "1189780",
             "system": "http://snomed.info/sct",
-            "display": "1 tab qd"
+            "code": "412410003",
+            "display": "Hypromellose (substance)"
           }
         ]
-      }
-    },
-    "code": {
-      "coding": [
-        {
-          "code": "1189780",
-          "system": "http://hc-sc.gc.ca",
-          "display": "Aspirin 81 MG [Ecotrin]"
+      },
+      "strength": {
+        "numerator": {
+          "value": 2,
+          "system": "http://unitsofmeasure.org",
+          "code": "mg"
+        },
+        "denominator": {
+          "value": 1,
+          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+          "code": "Tab"
         }
-      ]
-    },
-    "resourceType": "Medication",
-    "text": {
-      "status": "generated",
-      "div": "http://localhost:8080/meds/358"
-    },
-    "isBrand": true,
-    "id": "Medication/2"
-  }
+      }
+    }
+  ]
+}

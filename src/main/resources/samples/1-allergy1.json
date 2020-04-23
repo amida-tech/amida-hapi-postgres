@@ -1,39 +1,84 @@
 {
-    "status": "confirmed",
-    "patient": {
-      "reference": "Patient/1"
-    },
-    "criticality": "CRITL",
-    "text": {
-      "status": "generated",
-      "div": "localhost:8080/allergy/1685497"
-    },
-    "recordedDate": "2018-06-21",
-    "id": "AllergyIntolerance/1",
-    "category": "food",
-    "reaction": [
-      {
-        "manifestation": [
+  "resourceType": "AllergyIntolerance",
+  "criticality": "high",
+  "id": "AllergyIntolerance/1",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>allergy is to peanuts</p>\n      <p>recordedDate:2015-08-06T00:00:00-06:00</p>\n      <p>substance:Peanuts - dietary (substance)</p>\n    </div>"
+  },
+  "reaction": [
+    {
+      "substance": {
+        "coding": [
           {
-            "coding": [
-              {
-                "code": "39579001",
-                "system": "http://snomed.info/sct",
-                "display": "Anaphylaxis"
-              }
-            ]
+            "code": "QE1QX6B99R",
+            "system": "UNII",
+            "display": "peanut"
           }
         ]
-      }
-    ],
-    "substance": {
-      "coding": [
+      },
+      "manifestation": [
         {
-          "code": "QE1QX6B99R",
-          "system": "UNII",
-          "display": "peanut"
+          "coding": [
+            {
+              "code": "39579001",
+              "system": "http://snomed.info/sct",
+              "display": "Anaphylaxis"
+            }
+          ]
+        }
+      ],
+      "onset": "2014",
+      "severity": "moderate",
+      "note": [
+        {
+          "text": "The patient reports that the onset of urticaria was within 15 minutes of eating peanuts."
         }
       ]
-    },
-    "resourceType": "AllergyIntolerance"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://acme.com/ids/patients/risks",
+      "value": "49476535"
+    }
+  ],
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "code": "active",
+        "display": "Active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+        "code": "confirmed",
+        "display": "Confirmed"
+      }
+    ]
+  },
+  "category": [
+    "food"
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "QE1QX6B99R",
+        "display": "Peanut - dietary (substance)"
+      }
+    ],
+    "text": "Allergic to peanuts."
+  },
+  "patient": {
+    "reference": "Patient/1"
+  },
+  "recordedDate": "2015-08-06T15:37:31-06:00",
+  "recorder": {
+    "reference": "Practitioner/1"
   }
+}

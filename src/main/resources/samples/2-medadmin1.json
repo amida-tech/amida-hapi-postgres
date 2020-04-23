@@ -3,10 +3,11 @@
     "medicationReference": {
       "reference": "Medication/1"
     },
-    "patient": {
-      "reference": "Patient/1"
+    "subject": {
+      "reference": "Patient/1",
+      "display": "Kevin"
     },
-    "effectiveTimePeriod": {
+    "effectivePeriod": {
       "start": "2017-12-01",
       "end": "2018-01-30"
     },
@@ -40,7 +41,7 @@
           "system": "http://unitsofmeasure.org"
         }
       },
-      "quantity": {
+      "rateQuantity": {
         "code": "mg",
         "unit": "mg",
         "value": 80,
