@@ -1,4 +1,4 @@
-# Amida-Hapi-Postgress
+# Amida-Hapi-Postgres
 
 This is a basic restful Hapi server using Hapi and set up against DSTU2.  
 
